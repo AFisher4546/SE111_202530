@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Andrew Fisher">
+    <meta name="description" content="W6D1 - Intro to JS">
+
+    <title>W6D1 | JS Intro</title>
+</head>
+<body>
+
+    <h1>Week 6 D1 | Intro to JavaScript Demo</h1>
+
+    <script>
+        // everything inside of this element MUST BE JAVASCRIPT
+        //documentation / single line commenting in JS
+
+        //creating a variable --> declare name first --> keyword "var"
+        var num1 = 10
+        //once a name is declared, then it can be defined
+        var num2 = 7
+
+        //cannot use num1 or num2 until they have been declared AND defined
+        //define: assigned a value to
+        
+        var sum = num1 + num2
+        console.log(sum)
+
+        //alert() allows for a pop-up in the browser page to display data
+        //alert() ---> Python's print()
+
+        alert(`The sum is: ${sum}`)
+        //`` denotes a literal string --> works similar to f"" in Python -- ${VAR}
+
+        console.log(`hello there! the sum is: ${sum}`)
+        //line 37 isnt read until: the alert is finished
+
+        /* this is a multi line comment in JavaScript
+            to access the console via dev tools:
+                *press F12 OR right-click
+                *choose CONSOLE tab at top right
+        */
+
+        //prompt() --> Python's input()
+        prompt(`Enter your name: `)
+
+        //store a value from prompt()
+        var name = prompt(`Enter your name (again): `)
+        alert(`Hi there, ${name}!`)
+
+        //convert prompt() response string to data to number data:
+        var num = Number(prompt(`Enter a number to square: `))
+
+        var square = num * num
+        console.log(`The square of ${num} is ${square.toFixed(2)}`)
+
+        alert(`The square of ${num} is \n ${square.toFixed(2)}`)
+
+
+    </script>
+
+
+</body>
+</html>

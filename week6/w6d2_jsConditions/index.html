@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Andrew Fisher">
+    <meta name="description" content="W6D2 - JS Conditions">
+    <title>W6D2 | JS Demo #2</title>
+</head>
+<body>
+    <h1>Week 6 | JS Conditions & Functions Demo</h1>
+    <h3 id="special">Conditions & Functions - Click Me!</h3>
+
+
+    <script>
+        //in-document js - lives in the html file inside the <script>
+        
+        //variables/names must be declared before we can assign data to them
+        var gross = 10
+
+        var tax_total = gross * (20 / 100) //once a var has been declared and defined, it can be used in math or conditions
+
+        //basic function for develop and debugging -- goes to the: console
+        console.log(`the gross is; $${gross.toFixed(2)} and the tax is: $${tax_total.toFixed(2)}`)
+
+        
+        //prompt user for a 'yes' or 'no' response
+        var pref = prompt(`Welcome to Good Burger, home of the Good Burger, may I take your order?\nPlease type 'yes' or 'no':`).toLowerCase()
+        console.log(`User entered: ${pref}`)
+
+        //just like variables, functions must be declared and defined berfore they can be used
+        function checkDining(_pref)
+        {
+            //_pref is a parameter and will be defined when function is called
+            //_pref is also local var - only exists inside of this function
+            //each time func is called, a new value can be passed into _pref
+            if(_pref === 'yes')//conditions: (value | comparison | value)
+            {
+                //conditions require () in order to work in js
+
+                var dining = prompt(`Would you like to dine-in or take-out? \nPlease type 'in' or 'out':`).toLowerCase()
+
+                if(dining === 'in')
+                {
+                    console.log(`User has chose to dine; ${dining}`)
+                    return dining //return value replaces call to the function
+                }
+                else if(dining === 'out')
+                {
+                    console.log(`User has chose to dine; ${dining}`)
+                    return dining //return value replaces call to the function
+                }
+                else
+                {
+                    console.log(`User entered a bad value`)
+                    return `bad`
+                }
+            }
+
+            else if(_pref === 'no')
+            {
+                alert(`You have poor taste`)
+                return 0
+            }
+            else
+            {
+                alert(`uh oh! Invalid Entry!\nPlease reload and re-read directions`)
+                return 'bad'
+            }
+        }
+
+        //once a function is defined, then it can be called
+        var decision = checkDining(pref)
+
+        if(decision == 0)
+        {
+            alert(`okay, have a nice day. goodbye.`)
+        }
+        else if(decision == 'bad')
+        {
+            alert(`something went wrong`)
+        }
+        else
+        {
+            alert(`please tell me your order ... `)
+        }
+
+    </script>
+</body>
+</html>

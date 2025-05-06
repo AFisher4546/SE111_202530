@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Andrew Fisher">
+    <meta name="description" content="Week 7 Day 2 Demo - Riddles">
+    <title>W7D2 - Riddles!</title>
+</head>
+<body>
+    <div class="question-box">
+
+        <h3 class="questions">1. What can travel the world without leaving its place?</h3>
+
+        <input type="submit" value="Reveal Answer" id="submit1">
+        <p class="answers"><span id="answer1"></span></p>
+
+        <hr>
+
+    </div>
+
+    <div class="question-box">
+
+        <h3 class="questions">2. If you have me you want to share me, but if you share me you no longer have me. What am I?</h3>
+
+        <input type="submit" value="Reveal Answer" id="submit2">
+        <p class="answers"><span id="answer2"></span></p>
+
+        <hr>
+
+    </div>
+
+
+    <script>
+
+        document.querySelector(`#submit1`).addEventListener(`click`, answerOne)
+
+        function answerOne(event)
+        {
+            var span1 = document.querySelector(`#answer1`)
+
+            var answer = `A stamp!`
+
+            var userAnswer = document.querySelector(`#question1`).value
+
+            if(userAnswer.toLowerCase() == answer){
+                span1.innerHTML = `<b>Correct!</b> The answer is: <i>${answer}</i>`
+            }
+
+            span1.innerHTML = answer
+            
+        }
+
+        function answerTwo(event)
+        {
+            var span2 = document.querySelector(`#answer2`)
+
+            var answer = `A secret!`
+
+            span2.innerHTML = answer
+            
+        }
+
+
+    </script>
+</body>
+</html>

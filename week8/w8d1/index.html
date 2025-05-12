@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Andrew Fisher">
+    <meta name="description" content="Week 8 Day 1 | Intro to Data Structures">
+    <title>Week 8 Day 1 | Intro to Data Structures</title>
+</head>
+<body>
+    <h1>W8 - Data Structures in JavaScript</h1>
+    <h3>Arrays, Associative Arrays, and Objects</h3>
+
+    <div id="output">
+
+    </div>
+
+    <script>
+        //STANDARD ARRAYS
+        var people = [
+            "Katie",
+            "Ken",
+            "Tyler",
+            "Hailey",
+            "Keenan",
+            "Andrew",
+            "Jayda",
+            "Elijah"
+        ]
+
+        console.log(`Array: ${people}`)
+        console.log(`First value of Array: ${people[0]}`)
+
+        var firstPerson = people[0]
+        console.log(`first person of array: ${firstPerson}`)
+
+        console.log(`last value of array: ${people[people.length - 1]}`)
+        console.log(`total number of people in array: ${people.length}`)
+
+        people[0] = "Katharine"
+
+        people.push("Cameron")
+        console.log(`Array: ${people}\nArray length: ${people.length}`)
+
+        people.push(prompt("Enter your name to be added: "))
+        console.log(`Array: ${people}\nArray length: ${people.length}`)
+
+        //PARALELL STANDARD 1D ARRAYS
+        var favMovies = [
+            "Empire Records",
+            "Fight Club",
+            "Interstellar",
+            "Pitch Perfect",
+            "Inception",
+            "Surf's Up",
+            "Sinners",
+            "Alien",
+            "Hackers",
+            "Fave Movie"
+        ]
+        
+        //PROCESSING through ARRAYS
+
+        var output = document.querySelector(`#output`)
+        for(let index = 0; index < people.length; index++)
+        {
+            console.log(`${people[index]}'s favorite movie is: ${favMovies[index]}`)
+
+            output.innerHTML += `<p> ${people[index]}'s favorite movie is: <i>${favMovies[index]}</i></p>`
+        }
+
+        //ASSOCIATIVE ARRAYS
+
+
+        //OBJECTS
+
+
+
+    </script>
+</body>
+</html>

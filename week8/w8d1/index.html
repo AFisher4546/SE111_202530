@@ -42,7 +42,7 @@
         people.push("Cameron")
         console.log(`Array: ${people}\nArray length: ${people.length}`)
 
-        people.push(prompt("Enter your name to be added: "))
+        people.push("Elijah")
         console.log(`Array: ${people}\nArray length: ${people.length}`)
 
         //PARALELL STANDARD 1D ARRAYS
@@ -52,11 +52,12 @@
             "Interstellar",
             "Pitch Perfect",
             "Inception",
-            "Surf's Up",
+            "Five Nights at Freddy's",
             "Sinners",
             "Alien",
             "Hackers",
-            "Fave Movie"
+            "Jurassic Park",
+            "Spider-Man"
         ]
         
         //PROCESSING through ARRAYS
@@ -69,12 +70,96 @@
             output.innerHTML += `<p> ${people[index]}'s favorite movie is: <i>${favMovies[index]}</i></p>`
         }
 
-        //ASSOCIATIVE ARRAYS
-
-
         //OBJECTS
+        var pets = {
+        Katie: "George",
+        Ken: "Chopper",
+        Tyler: "Luna",
+        Hailey: "Daisy",
+        Keenan: "John",
+        Andrew: "Brody",
+        Jayda: "Zen",
+        ElijahS: "River",
+        Cameron: "Kenzi",
+        ElijahF: "Mellow",
+        }
 
+        console.log(`Pets Object: ${pets}`)
+        console.log(`First value of Array: ${pets["Katie"]}`)
 
+        //objectName.propertyName
+        console.log(`Last value of Array: ${pets.ElijahF}`)
+
+        //more of a real world object example
+        var playerCharacter = {
+            name: "John",
+            class: "Druid",
+            wildshape: "Tiger",
+            age: 2,
+            hp: 26,
+            level: 1,
+            spells: ["Shellilagh", "Ice Knife", "Speak to Animals"],
+
+            //this is how a method is born
+            greeting: function () {
+                alert(`I am ${this.name}, hear me meow.`)
+            }
+        }
+
+        //add a value
+        playerCharacter.damage = 3
+
+        //processing through objects --> for in loop needed
+        for(let key in playerCharacter){
+            //key = property
+            //"fro every property in the object, do the following"
+
+            console.log(`${key}: ${playerCharacter[key]}`)
+        }
+
+        var enemy = {
+            name: "Johnathon",
+            class: "Skeleton",
+            age: 200,
+            hp: 16,
+            level: 5,
+            spells: ["Boo!", "Bone PickAxe"],
+
+            //this is how a method is born
+            greeting: function () {
+                alert(`I am ${this.name}, Boo!`)
+            },
+            damage: 5
+        }
+
+        console.log(`${playerCharacter.name} is a ${playerCharacter.class}`)
+        console.log(`${enemy.name} is a ${enemy.class}`)
+
+        playerCharacter.greeting()
+        enemy.greeting()
+
+        //put it all together --> loopception
+
+        var fight = [
+            playerCharacter, //fight[0]
+            enemy //fight[1]
+        ]
+
+        var dndOutpost = ``
+
+        //process the data structure. main structure = standrad array
+        for(let i = 0; i < fight.length; i++)
+        {
+            newOutput += `<hr><h3>INFO FOR: ${fight[i].name} </h3>`
+        }
+
+        //write info to output div
+        output += newOutput
+
+        for(let key in fight[i])
+        {
+            dndOutpost += `<p><b>${key}:</b> ${fight[i][key]}</p>`
+        }
 
     </script>
 </body>
